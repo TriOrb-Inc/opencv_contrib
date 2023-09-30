@@ -47,6 +47,10 @@
 
 #include <opencv2/core.hpp>
 
+#ifndef CERES_FOUND
+#define CERES_FOUND
+#endif
+
 namespace cv
 {
   namespace sfm
