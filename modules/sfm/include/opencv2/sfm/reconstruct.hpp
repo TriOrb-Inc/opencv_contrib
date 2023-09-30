@@ -71,8 +71,8 @@ namespace cv
     */
     CV_EXPORTS_W
     void
-    reconstruct(InputArrayOfArrays points2d, OutputArrayOfArrays Ps, OutputArrayOfArrays points3d, InputOutputArray K,
-                bool is_projective = false);
+  reconstruct(InputArrayOfArrays points2d, OutputArray Ps, OutputArray points3d, InputOutputArray K,
+              bool is_projective = false);
 
     /** @brief Reconstruct 3d points from 2d correspondences while performing autocalibration.
       @param points2d Input vector of vectors of 2d points (the inner vector is per image).
@@ -90,8 +90,8 @@ namespace cv
     */
     CV_EXPORTS_W
     void
-    reconstruct(InputArrayOfArrays points2d, OutputArray Rs, OutputArray Ts, InputOutputArray K,
-                OutputArray points3d, bool is_projective = false);
+  reconstruct(InputArrayOfArrays points2d, OutputArray Rs, OutputArray Ts, InputOutputArray K,
+              OutputArray points3d, bool is_projective = false);
 
     /** @brief Reconstruct 3d points from 2d images while performing autocalibration.
       @param images a vector of string with the images paths.
@@ -108,8 +108,8 @@ namespace cv
     */
     CV_EXPORTS_W
     void
-    reconstruct(const std::vector<String> images, OutputArray Ps, OutputArray points3d,
-                InputOutputArray K, bool is_projective = false);
+  reconstruct(const std::vector<cv::String> images, OutputArray Ps, OutputArray points3d,
+              InputOutputArray K, bool is_projective = false);
 
     /** @brief Reconstruct 3d points from 2d images while performing autocalibration.
       @param images a vector of string with the images paths.
@@ -128,8 +128,8 @@ namespace cv
     */
     CV_EXPORTS_W
     void
-    reconstruct(const std::vector<String> images, OutputArray Rs, OutputArray Ts,
-                InputOutputArray K, OutputArray points3d, bool is_projective = false);
+  reconstruct(const std::vector<cv::String> images, OutputArray Rs, OutputArray Ts,
+              InputOutputArray K, OutputArray points3d, bool is_projective = false);
 
 #endif /* CV_DOXYGEN || CERES_FOUND */
 
