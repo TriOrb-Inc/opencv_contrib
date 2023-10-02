@@ -94,7 +94,7 @@ namespace sfm
 
   //  Reconstruction function for API
   void
-  reconstruct(InputArrayOfArrays points2d, OutputArray Ps, OutputArray points3d, InputOutputArray K,
+  reconstruct(InputArrayOfArrays points2d, OutputArrayOfArrays Ps, OutputArrayOfArrays points3d, InputOutputArray K,
               bool is_projective)
   {
     const int nviews = points2d.total();
@@ -190,7 +190,7 @@ namespace sfm
 
 
   void
-  reconstruct(const std::vector<cv::String> images, OutputArray Ps, OutputArray points3d,
+  reconstruct(const std::vector<cv::String> images, OutputArrayOfArrays Ps, OutputArrayOfArrays points3d,
               InputOutputArray K, bool is_projective)
   {
     const int nviews = static_cast<int>(images.size());
